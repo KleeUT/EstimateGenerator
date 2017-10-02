@@ -38,7 +38,7 @@ const EstimateDisplay = () => {
     <Display>
       <Icons>
         <a href="http://kleeut.com"><KleeutLink /></a>
-        <a href="https://github.com"><GithubLink /></a>
+        <a href="https://github.com/KleeUT/EstimateGenerator"><GithubLink /></a>
       </Icons>
     </Display>
   );
