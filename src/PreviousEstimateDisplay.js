@@ -42,7 +42,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(
 const PreviousItemsDisplay = ({ children }) => {
   const Display = styled.div`
         overflow:auto;
-        flex-grow:1;
+        height:100%;
     `;
   return (
     <Display>
