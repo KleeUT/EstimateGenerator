@@ -5,8 +5,8 @@ export const estimate = (
     currentEstimate: {},
     options: {
       units: ["2", "3", "5", "8"],
-      qualifiers: ["mad", "mythical man", "long", "short", "bloody"],
-      measures: ["minutes", "hours", "days", "weeks", "unicorns"]
+      qualifiers: ["Mad", "Mythical Man", "Long", "Short", "Bloody"],
+      measures: ["Minutes", "Hours", "Days", "Weeks", "Unicorns"]
     },
     previousEstimates: []
   },
@@ -15,21 +15,20 @@ export const estimate = (
   switch (action.type) {
     case Actions.estimate.type:
       const currentEstimate = generateEstimate(state.options);
-      const previousEstimates = state.currentEstimate ? [
-        state.currentEstimate,
-        ...state.previousEstimates
-      ] : state.previousEstimates;
+      const previousEstimates = state.currentEstimate
+        ? [state.currentEstimate, ...state.previousEstimates]
+        : state.previousEstimates;
       console.log(currentEstimate);
       return { ...state, currentEstimate, previousEstimates };
-    default:
-    {
-        if(state.currentEstimate){
-            return state;
-        }
-      return {        
+    default: {
+      if (state.currentEstimate) {
+        return state;
+      }
+      return {
         currentEstimate: generateEstimate(state.options),
         ...state
-      };}
+      };
+    }
   }
 };
 

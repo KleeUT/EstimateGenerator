@@ -1,3 +1,3 @@
 export const estimate = {
-    type: "ESTIMATE"
-}
+  type: "ESTIMATE"
+};
